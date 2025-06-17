@@ -2,8 +2,8 @@
 import './globals.css'
 
 export const metadata = {
-  title: 'Generador de Setups Racing',
-  description: 'Crea setups detallados con IA para GT7, Forza y más.',
+  title: 'Coche Setup Racing',
+  description: 'Genera setups óptimos con IA para circuitos',
 }
 
 export default function RootLayout({ children }) {
