@@ -42,7 +42,7 @@ export default function Formulario({ onGenerate }) {
         </select>
         <button
   onClick={handleSubmit}
-  className="bg-red-600 text-white font-bold uppercase py-3 rounded-xl text-lg hover:bg-red-700 transition"
+  className="mt-8 w-full py-5 px-6 bg-red-600 hover:bg-red-700 text-white text-2xl sm:text-3xl font-extrabold tracking-wide uppercase rounded-2xl shadow-[0_0_20px_#ff000080] transition-all duration-300"
   disabled={loading}
 >
   {loading ? 'Generando...' : '¡Generar Setup!'}
