@@ -4,33 +4,32 @@ export async function POST(req) {
 
   const { car, circuit, game, style } = body
 
- const prompt = `Eres un experto en preparación de coches para videojuegos de conducción. Tu tarea es crear un **setup detallado y específico** para el coche "${car}", en el circuito "${circuit}", dentro del juego "${game}". El estilo de conducción es "${style}".
+  const prompt = `Eres un experto en preparación de coches para videojuegos de conducción. Tu tarea es crear un **setup detallado y específico** para el coche "${car}", en el circuito "${circuit}", dentro del juego "${game}". El estilo de conducción es "${style}".
 
-Adáptate al juego elegido. Si es Gran Turismo 7, usa valores y secciones reales de GT7. Si es Forza Horizon 5, hazlo con las opciones reales de ese juego.
+Sigue este formato y ... usa SIEMPRE títulos en negrita Markdown (con doble asterisco **) ... para separar secciones. No pongas explicaciones ni repitas texto.
 
-El setup debe incluir:
+**COMPONENTES RECOMENDADOS**
+- Neumáticos: tipo exacto (ej. slick suaves)
+- Suspensión: tipo detallado (ej. ajustable de competición)
+- Frenos: tipo detallado
+- Diferencial: tipo exacto
+- Transmisión: tipo exacto
+- Otros: turbo, ECU, embrague...
 
-1. 🧩 **Componentes recomendados**:
-   - Tipo de neumáticos (slick, sport, offroad, etc.)
-   - Frenos (disco ventilado, cerámicos, competición...)
-   - Suspensión (ajustable, de competición...)
-   - Diferencial (abierto, autoblocante, controlado electrónicamente)
-   - Transmisión (manual, secuencial, etc.)
-   - Turbo, embrague, ECU, etc.
+**SETUP TÉCNICO CON VALORES**
+- Suspensión delantera / trasera (kg/mm o N/mm)
+- Caída (en grados)
+- Altura del coche (mm)
+- Relación de marchas (de 1ª a 6ª/7ª)
+- Relación final (ej. 4.10)
+- Presión de neumáticos (Bar o PSI)
+- Aerodinámica (carga delantera y trasera)
+- Reparto de frenos (ej. 60/40)
+- Potencia y peso final
 
-2. 🔧 **Setup técnico con valores**:
-   - Suspensión delantera / trasera
-   - Caídas y convergencia (en grados)
-   - Altura libre al suelo
-   - Marchas (1ª a 6ª o 7ª)
-   - Relación final
-   - Presión de neumáticos (en PSI o Bar)
-   - Aerodinámica (alas, splitters)
-   - Frenos (potencia y reparto)
-
-3. 📌 Notas y consejos de conducción:
-   - Cómo aprovechar este setup
-   - Cómo manejarlo en salidas, curvas, etc.
+**NOTAS Y CONSEJOS DE CONDUCCIÓN**
+- Cómo aprovechar este setup en este circuito
+- Cómo tomar curvas, traccionar, frenar o acelerar con este estilo
 
 El resultado debe estar perfectamente ordenado, sin explicaciones ni repeticiones, solo datos y títulos por sección.`
 
