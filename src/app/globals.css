@@ -3,27 +3,9 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Fuente personalizada (opcional, usar Orbitron u otra digital) */
+
 body {
-  @apply bg-black text-white font-sans;
-}
-
-::-webkit-scrollbar {
-  width: 8px;
-}
-::-webkit-scrollbar-track {
-  background: #111;
-}
-::-webkit-scrollbar-thumb {
-  background-color: #0ff;
-  border-radius: 4px;
-}
-
-/* Input glow */
-input, select {
-  @apply bg-gray-900 border border-cyan-500 text-white rounded-xl px-4 py-2;
-}
-input:focus, select:focus {
-  outline: none;
-  box-shadow: 0 0 10px #00f2ff;
+  background-color: black;
+  color: white;
+  font-family: sans-serif;
 }
