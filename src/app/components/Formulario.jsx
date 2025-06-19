@@ -8,6 +8,7 @@ export default function Formulario({ onGenerate }) {
   const [game, setGame] = useState('GT7')
   const [style, setStyle] = useState('grip')
   const [loading, setLoading] = useState(false)
+  const [pr, setPr] = useState('')
 
   const handleSubmit = async () => {
     if (!car || !circuit) return
@@ -15,7 +16,7 @@ export default function Formulario({ onGenerate }) {
     const res = await fetch('/api/generar-setup', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ car, circuit, game, style }),
+      body: JSON.stringify({ car, circuit, game, style, pr }),
     })
     const data = await res.json()
     onGenerate(data.result)
@@ -36,6 +37,7 @@ export default function Formulario({ onGenerate }) {
         </select>
         <input type="text" placeholder="Coche (ej: Mazda RX-7)" value={car} onChange={(e) => setCar(e.target.value)} className="w-full" />
         <input type="text" placeholder="Circuito (ej: Nürburgring)" value={circuit} onChange={(e) => setCircuit(e.target.value)} className="w-full" />
+        <input type="number" placeholder="Límite de PR (opcional)" value={pr} onChange={(e) => setPr(e.target.value)} className="w-full" />
         <select value={style} onChange={(e) => setStyle(e.target.value)} className="w-full">
           <option value="grip">Grip (asfalto seco)</option>
           <option value="lluvia">Lluvia</option>

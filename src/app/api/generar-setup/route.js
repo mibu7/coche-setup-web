@@ -9,12 +9,12 @@ export async function POST(req) {
 Sigue este formato exacto y usa SIEMPRE títulos en negrita Markdown (con doble asterisco ** así), tal como se muestra abajo. No pongas explicaciones ni repitas texto.
 
 **COMPONENTES RECOMENDADOS**
-- Neumáticos: tipo exacto (ej. slick suaves)
-- Suspensión: tipo detallado (ej. ajustable de competición)
+- Neumáticos: tipo exacto (ej. blandos de competición)
+- Suspensión: totalmente personalizable (ej. ajustable de competición)
 - Frenos: tipo detallado
 - Diferencial: totalmente personalizable
 - Transmisión: totalmente personalizable
-- Otros: turbo, ECU, embrague...
+- Otros: turbocompresor, ECU, embrague, mayor carrera, arbol de levas, aerodinamica, lastre, limitador de potencia, nitro, filtro de aire, escape, carroceria.
 
 **SETUP TÉCNICO CON VALORES**
 - Suspensión delantera / trasera (kg/mm o N/mm)
