@@ -60,6 +60,7 @@ El resultado debe estar perfectamente ordenado, sin explicaciones ni repeticione
   }
 
   const result = data.choices?.[0]?.message?.content || 'Sin respuesta válida.'
+  console.log('📄 RESPUETA COMPLETA:', result)
   return new Response(JSON.stringify({ result }), {
     headers: { 'Content-Type': 'application/json' },
   })
