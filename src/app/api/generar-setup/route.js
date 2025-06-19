@@ -12,8 +12,8 @@ Sigue este formato exacto y usa SIEMPRE títulos en negrita Markdown (con doble 
 - Neumáticos: tipo exacto (ej. slick suaves)
 - Suspensión: tipo detallado (ej. ajustable de competición)
 - Frenos: tipo detallado
-- Diferencial: tipo exacto
-- Transmisión: tipo exacto
+- Diferencial: totalmente personalizable
+- Transmisión: totalmente personalizable
 - Otros: turbo, ECU, embrague...
 
 **SETUP TÉCNICO CON VALORES**
