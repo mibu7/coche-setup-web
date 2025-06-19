@@ -1,8 +1,8 @@
 
 'use client'
 import { useState } from 'react'
-import Formulario from '../components/Formulario'
-import Resultado from '../components/Resultado'
+import Formulario from './components/Formulario'
+import Resultado from './components/Resultado'
 
 export default function Home() {
   const [setup, setSetup] = useState('')
