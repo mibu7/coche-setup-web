@@ -2,7 +2,7 @@
 import './globals.css'
 
 export const metadata = {
-  title: 'Coche Setup Web',
+  title: 'SetupSpeed',
   description: 'Generador de Setups con IA estilo Racing',
 }
 
