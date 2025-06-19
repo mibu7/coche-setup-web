@@ -2,8 +2,8 @@
 import './globals.css'
 
 export const metadata = {
-  title: 'Coche Setup Racing',
-  description: 'Genera setups óptimos con IA para circuitos',
+  title: 'Coche Setup Web',
+  description: 'Generador de Setups con IA estilo Racing',
 }
 
 export default function RootLayout({ children }) {
