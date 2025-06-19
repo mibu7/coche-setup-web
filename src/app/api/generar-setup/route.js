@@ -6,7 +6,7 @@ export async function POST(req) {
 
   const prompt = `Eres un experto en preparación de coches para videojuegos de conducción. Tu tarea es crear un **setup detallado y específico** para el coche "${car}", en el circuito "${circuit}", dentro del juego "${game}". El estilo de conducción es "${style}".
 
-Sigue estrictamente este formato y usa SIEMPRE títulos en negrita Markdown (con doble asterisco **TÍTULO**) para separar cada bloque de información. No pongas explicaciones ni repitas texto.
+Sigue este formato exacto y usa SIEMPRE títulos en negrita Markdown (con doble asterisco ** así), tal como se muestra abajo. No pongas explicaciones ni repitas texto.
 
 **COMPONENTES RECOMENDADOS**
 - Neumáticos: tipo exacto (ej. slick suaves)
