@@ -47,23 +47,23 @@ Organiza exactamente como en GT7, indicando valores para parte DELANTERA y TRASE
 
 - **DIFERENCIAL**
   - Tipo:
-  - Torsión inicial: (valores de 5 a 60)
-  - Sensibilidad aceleración: (valores de 5 a 60)
-  - Sensibilidad frenada: (valores de 5 a 60)
+  - Torsión inicial (valores de 5 a 60): 
+  - Sensibilidad aceleración (valores de 5 a 60): 
+  - Sensibilidad frenada (valores de 5 a 60):
   - Vectorización de par (si aplica):
-  - Distribución torsión F/R (%): (valores de 5:95 a 50:50)
+  - Distribución torsión F/R (valores de 5:95 a 50:50 en %): 
 
 - **AERODINÁMICA**
   - Carga aerodinámica (delante / detrás):
 
 - **UNIDAD DE CONTROL DEL MOTOR**
   - Tipo:
-  - Salida (%): (valores de 70 a 100)
+  - Salida (valores de 70 a 100 en %): 
 
 - **RENDIMIENTO**
-  - Limitador potencia (%): (valores de 70 a 100)
-  - Lastre (kg): (valores de 0 a 200)
-  - Posición del lastre: (valores de -50 a 50)
+  - Limitador potencia (valores de 70 a 100 en %): 
+  - Lastre (valores de 0 a 200 en kg): 
+  - Posición del lastre (valores de -50 a 50): 
 
 - **TRANSMISIÓN**
   - Tipo:
@@ -83,7 +83,7 @@ Organiza exactamente como en GT7, indicando valores para parte DELANTERA y TRASE
   - Pastillas:
   - Freno de mano:
   - Fuerza del freno de mano:
-  - Equilibrio delantero / trasero: (valores de -5 a 5)
+  - Equilibrio delantero / trasero (valores de -5 a 5): 
 
 - **DIRECCIÓN**
   - Kit ángulo dirección:
