@@ -4,79 +4,103 @@ export async function POST(req) {
 
   const { car, circuit, game, style } = body
 
-  const prompt = `Eres un experto en configuración de coches dentro del juego Gran Turismo 7. Tu tarea es generar un **setup realista y detallado** para el coche "${car}" en el circuito "${circuit}", con un estilo de conducción "${style}".${pr ? ` El coche debe estar ajustado para no superar un PR de ${pr}. Usa lastre, limitador o piezas adecuadas para lograrlo.` : ''}
+  const prompt = `Eres un experto en ajustes de coches para el videojuego Gran Turismo 7. Genera un setup completo y detallado para el coche "${car}", en el circuito "${circuit}", con un estilo de conducción "${style}".${pr ? ` El coche no debe superar un PR de ${pr}, usa limitador de potencia o lastre si es necesario.` : ''}
 
-Sigue este formato exactamente y usa títulos en negrita Markdown con doble asterisco (**):
+El resultado debe tener estas dos secciones principales, con títulos en mayúsculas y en Markdown con doble asterisco (**):
+
+---
 
 **MODIFICACIONES RECOMENDADAS**
-Divide esta sección en las siguientes categorías (solo incluye las relevantes para el coche actual):
 
-- Deportivo
-- Club Deportivo
-- Semicompetición
-- Competición
-- Extremo
-- Definitivo
+Organiza por bloques con subtítulo en mayúsculas:
 
-Bajo cada categoría, muestra las modificaciones instaladas de entre estas:
-(→ aquí puedes copiar la lista completa que tú me diste: filtro de aire deportivo, sistema nitroso, etc.)
+- **DEPORTIVO**
+- **CLUB DEPORTIVO**
+- **SEMICOMPETICIÓN**
+- **COMPETICIÓN**
+- **EXTREMO**
+- **DEFINITIVO**
+
+Dentro de cada bloque, incluye solo las piezas realmente instaladas. Usa esta lista de referencia:
+
+→ (Aquí copia y pega todas las modificaciones que tú has detallado arriba)
+
+---
 
 **SETUP TÉCNICO CON VALORES**
-Organiza esta sección así:
 
-- Neumáticos (delante/detrás): tipo exacto
+Organiza exactamente como en GT7, indicando valores para parte DELANTERA y TRASERA cuando aplique:
 
-- Suspensión:
-  - Tipo de suspensión
-  - Altura de carrocería (mm)
-  - Barra estabilizadora (1-10)
-  - Amortiguación compresión (%)
-  - Amortiguación expansión (%)
-  - Frecuencia natural (Hz)
-  - Caída (grados)
-  - Convergencia (grados)
+- **NEUMÁTICOS**
+  - Tipo delante:
+  - Tipo detrás:
 
-- Diferencial:
-  - Tipo
-  - Torsión inicial
-  - Sensibilidad de aceleración
-  - Sensibilidad de frenada
-  - Distribución de par (si aplica)
+- **SUSPENSIÓN**
+  - Tipo:
+  - Altura (delante / detrás) en mm:
+  - Barra estabilizadora (1 a 10):
+  - Amortiguación compresión (%):
+  - Amortiguación expansión (%):
+  - Frecuencia natural (Hz):
+  - Caída (delante / detrás en grados):
+  - Convergencia (delante / detrás en grados):
 
-- Aerodinámica:
-  - Carga delantera / trasera (si lleva alerón)
+- **DIFERENCIAL**
+  - Tipo:
+  - Torsión inicial: (valores de 5 a 60)
+  - Sensibilidad aceleración: (valores de 5 a 60)
+  - Sensibilidad frenada: (valores de 5 a 60)
+  - Vectorización de par (si aplica):
+  - Distribución torsión F/R (%): (valores de 5:95 a 50:50)
 
-- Unidad de control del motor:
-  - Tipo
-  - Ajuste de salida (%)
+- **AERODINÁMICA**
+  - Carga aerodinámica (delante / detrás):
 
-- Ajuste de rendimiento:
-  - Limitador de potencia (%)
-  - Lastre (kg)
-  - Posición del lastre
+- **UNIDAD DE CONTROL DEL MOTOR**
+  - Tipo:
+  - Salida (%): (valores de 70 a 100)
 
-- Transmisión:
-  - Tipo
-  - Velocidad punta (km/h)
-  - Ajuste de marchas (si es manual)
+- **RENDIMIENTO**
+  - Limitador potencia (%): (valores de 70 a 100)
+  - Lastre (kg): (valores de 0 a 200)
+  - Posición del lastre: (valores de -50 a 50)
 
-- Nitro / turbo / sobrealimentación:
-  - Estado y tipo
+- **TRANSMISIÓN**
+  - Tipo:
+  - Velocidad punta (km/h):
+  - Marchas personalizadas (si aplica):
 
-- Frenos:
-  - Sistema, pastillas
-  - Fuerza freno de mano, equilibrio
+- **NITRO / TURBO / ANTILAG**
+  - Estado y tipo:
 
-- Dirección:
-  - Kit de ángulo, dirección trasera
+- **ADMISIÓN Y ESCAPE**
+  - Filtro de aire:
+  - Silenciador:
+  - Colector de escape:
 
-- Tren de tracción:
-  - Embrague, volante motor, eje
+- **FRENOS**
+  - Tipo:
+  - Pastillas:
+  - Freno de mano:
+  - Fuerza del freno de mano:
+  - Equilibrio delantero / trasero: (valores de -5 a 5)
+
+- **DIRECCIÓN**
+  - Kit ángulo dirección:
+  - Dirección 4 ruedas:
+  - Ángulo trasero:
+
+- **TREN DE TRACCIÓN**
+  - Embrague y volante:
+  - Eje de transmisión:
+
+---
 
 **NOTAS Y CONSEJOS DE CONDUCCIÓN**
-Indica cómo aprovechar este setup en el circuito, cómo tomar curvas, frenar, etc.
+Explica cómo aprovechar el setup, cómo frenar, entrar en curvas, traccionar, etc.
 
-El resultado debe estar ordenado, sin explicaciones adicionales, solo datos bajo cada título.`
+No incluyas repeticiones ni introducciones. Solo los datos bajo cada sección.
+`
 
   const apiKey = process.env.OPENAI_API_KEY
   console.log('🔑 Clave API usada:', apiKey)
