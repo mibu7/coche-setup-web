@@ -2,7 +2,7 @@ export async function POST(req) {
   const body = await req.json()
   console.log('📥 Petición recibida con:', body)
 
-  const { car, circuit, game, style } = body
+  const { car, circuit, game, style, pr } = body
 
   const prompt = `Eres un experto en ajustes de coches para el videojuego Gran Turismo 7. Genera un setup completo y detallado para el coche "${car}", en el circuito "${circuit}", con un estilo de conducción "${style}".${pr ? ` El coche no debe superar un PR de ${pr}, usa limitador de potencia o lastre si es necesario.` : ''}
 
