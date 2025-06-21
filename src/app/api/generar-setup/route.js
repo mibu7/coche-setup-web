@@ -4,34 +4,79 @@ export async function POST(req) {
 
   const { car, circuit, game, style } = body
 
-  const prompt = `Eres un experto en preparación de coches para videojuegos de conducción. Tu tarea es crear un **setup detallado y específico** para el coche "${car}", en el circuito "${circuit}", dentro del juego "${game}". El estilo de conducción es "${style}".
+  const prompt = `Eres un experto en configuración de coches dentro del juego Gran Turismo 7. Tu tarea es generar un **setup realista y detallado** para el coche "${car}" en el circuito "${circuit}", con un estilo de conducción "${style}".${pr ? ` El coche debe estar ajustado para no superar un PR de ${pr}. Usa lastre, limitador o piezas adecuadas para lograrlo.` : ''}
 
-Sigue este formato exacto y usa SIEMPRE títulos en negrita Markdown (con doble asterisco ** así), tal como se muestra abajo. No pongas explicaciones ni repitas texto.
+Sigue este formato exactamente y usa títulos en negrita Markdown con doble asterisco (**):
 
-**COMPONENTES RECOMENDADOS**
-- Neumáticos: tipo exacto (ej. blandos de competición)
-- Suspensión: totalmente personalizable (ej. ajustable de competición)
-- Frenos: tipo detallado
-- Diferencial: totalmente personalizable
-- Transmisión: totalmente personalizable
-- Otros: turbocompresor, ECU, embrague, mayor carrera, arbol de levas, aerodinamica, lastre, limitador de potencia, nitro, filtro de aire, escape, carroceria.
+**MODIFICACIONES RECOMENDADAS**
+Divide esta sección en las siguientes categorías (solo incluye las relevantes para el coche actual):
+
+- Deportivo
+- Club Deportivo
+- Semicompetición
+- Competición
+- Extremo
+- Definitivo
+
+Bajo cada categoría, muestra las modificaciones instaladas de entre estas:
+(→ aquí puedes copiar la lista completa que tú me diste: filtro de aire deportivo, sistema nitroso, etc.)
 
 **SETUP TÉCNICO CON VALORES**
-- Suspensión delantera / trasera (kg/mm o N/mm)
-- Caída (en grados)
-- Altura del coche (mm)
-- Relación de marchas (de 1ª a 6ª/7ª)
-- Relación final (ej. 4.10)
-- Presión de neumáticos (Bar o PSI)
-- Aerodinámica (carga delantera y trasera)
-- Reparto de frenos (ej. 60/40)
-- Potencia y peso final
+Organiza esta sección así:
+
+- Neumáticos (delante/detrás): tipo exacto
+
+- Suspensión:
+  - Tipo de suspensión
+  - Altura de carrocería (mm)
+  - Barra estabilizadora (1-10)
+  - Amortiguación compresión (%)
+  - Amortiguación expansión (%)
+  - Frecuencia natural (Hz)
+  - Caída (grados)
+  - Convergencia (grados)
+
+- Diferencial:
+  - Tipo
+  - Torsión inicial
+  - Sensibilidad de aceleración
+  - Sensibilidad de frenada
+  - Distribución de par (si aplica)
+
+- Aerodinámica:
+  - Carga delantera / trasera (si lleva alerón)
+
+- Unidad de control del motor:
+  - Tipo
+  - Ajuste de salida (%)
+
+- Ajuste de rendimiento:
+  - Limitador de potencia (%)
+  - Lastre (kg)
+  - Posición del lastre
+
+- Transmisión:
+  - Tipo
+  - Velocidad punta (km/h)
+  - Ajuste de marchas (si es manual)
+
+- Nitro / turbo / sobrealimentación:
+  - Estado y tipo
+
+- Frenos:
+  - Sistema, pastillas
+  - Fuerza freno de mano, equilibrio
+
+- Dirección:
+  - Kit de ángulo, dirección trasera
+
+- Tren de tracción:
+  - Embrague, volante motor, eje
 
 **NOTAS Y CONSEJOS DE CONDUCCIÓN**
-- Cómo aprovechar este setup en este circuito
-- Cómo tomar curvas, traccionar, frenar o acelerar con este estilo
+Indica cómo aprovechar este setup en el circuito, cómo tomar curvas, frenar, etc.
 
-El resultado debe estar perfectamente ordenado, sin explicaciones ni repeticiones, solo datos y títulos por sección.`
+El resultado debe estar ordenado, sin explicaciones adicionales, solo datos bajo cada título.`
 
   const apiKey = process.env.OPENAI_API_KEY
   console.log('🔑 Clave API usada:', apiKey)

@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 export default function Resultado({ setup }) {
   if (!setup) return null
 
-  const matchSecciones = setup.match(/\*\*COMPONENTES RECOMENDADOS\*\*([\s\S]*?)\*\*SETUP TÉCNICO CON VALORES\*\*([\s\S]*?)\*\*NOTAS Y CONSEJOS DE CONDUCCIÓN\*\*([\s\S]*)/)
+  const matchSecciones = setup.match(/\*\*MODIFICACIONES RECOMENDADAS\*\*([\s\S]*?)\*\*SETUP TÉCNICO CON VALORES\*\*([\s\S]*?)\*\*NOTAS Y CONSEJOS DE CONDUCCIÓN\*\*([\s\S]*)/)
 
   if (!matchSecciones) {
     return (
@@ -37,7 +37,7 @@ export default function Resultado({ setup }) {
       transition={{ duration: 0.6 }}
       className="max-w-3xl mx-auto mt-14 space-y-10 text-white"
     >
-      {renderSeccion('COMPONENTES RECOMENDADOS', componentes)}
+      {renderSeccion('MODIFICACIONES RECOMENDADAS', componentes)}
       {renderSeccion('SETUP TÉCNICO CON VALORES', tecnico)}
       {renderSeccion('NOTAS Y CONSEJOS DE CONDUCCIÓN', notas)}
     </motion.div>
