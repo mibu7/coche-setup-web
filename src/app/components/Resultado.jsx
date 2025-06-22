@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 export default function Resultado({ setup }) {
   if (!setup) return null
 
-  const matchSecciones = setup.match(/MODIFICACIONES RECOMENDADAS([\s\S]*?)SETUP TÉCNICO CON VALORES([\s\S]*?)NOTAS Y CONSEJOS DE CONDUCCIÓN([\s\S]*)/)
+  const matchSecciones = setup.match(/MODIFICACIONES RECOMENDADAS\s*([\s\S]*?)SETUP TÉCNICO CON VALORES\s*([\s\S]*?)NOTAS Y CONSEJOS DE CONDUCCIÓN\s*([\s\S]*)/)
 
   if (!matchSecciones) {
     return (
