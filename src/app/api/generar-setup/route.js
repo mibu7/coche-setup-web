@@ -7,7 +7,10 @@ export async function POST(req) {
   const prompt = `
 Eres un experto en Gran Turismo 7. Genera un setup completo, profesional y realista para el coche "${car}", en el circuito "${circuit}", con estilo de conducción "${style}". ${pr ? `El coche no debe superar un PR de ${pr}, ajusta con limitador de potencia o lastre.` : 'No hay límite de PR, maximiza el rendimiento con todas las mejores piezas disponibles.'}
 
-Organiza el resultado en 3 secciones claras con títulos normales (sin asteriscos ni Markdown). Cada sección debe ser limpia, legible y fiel a los datos reales de GT7.
+Usa exactamente estos tres títulos, sin modificar ni añadir símbolos, cada uno en su propia línea:  
+MODIFICACIONES RECOMENDADAS  
+SETUP TÉCNICO CON VALORES  
+NOTAS Y CONSEJOS DE CONDUCCIÓN  
 
 ---
 
