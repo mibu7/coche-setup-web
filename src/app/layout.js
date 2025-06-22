@@ -1,4 +1,3 @@
-
 import './globals.css'
 
 export const metadata = {
@@ -29,6 +28,18 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="es">
+      <head>
+        {/* Google Analytics */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-5YYNTSCW3D"></script>
+        <script dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-5YYNTSCW3D');
+          `
+        }} />
+      </head>
       <body>{children}</body>
     </html>
   )
