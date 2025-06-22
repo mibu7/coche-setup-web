@@ -2,28 +2,27 @@
 import './globals.css'
 
 export const metadata = {
-  title: 'SetupSpeed - Generador de setups para coches',
-  description: 'Crea setups realistas con IA para Gran Turismo 7, Forza Horizon y más.',
+  title: 'SetupSpeed - Generador de setups para Gran Turismo 7 y más',
+  description: 'Crea el mejor setup técnico y realista para tu coche en Gran Turismo 7, Forza Horizon 5 y Assetto Corsa. Ajustes detallados con IA en segundos.',
+  keywords: ['Gran Turismo 7', 'GT7', 'Forza Horizon 5', 'Assetto Corsa', 'setup coches', 'ajustes de coches', 'configuración GT7', 'tuning GT7'],
   openGraph: {
-    title: 'SetupSpeed - Generador de setups para coches',
-    description: 'Crea setups realistas con IA para Gran Turismo 7, Forza Horizon y más.',
+    title: 'SetupSpeed - Generador de setups de coches',
+    description: 'Crea setups profesionales y técnicos para tus coches en videojuegos de conducción.',
     url: 'https://www.setupspeed.com',
     siteName: 'SetupSpeed',
     images: [
       {
-        url: 'https://www.setupspeed.com/favicon.ico', // O sube otra imagen más grande si tienes
-        width: 512,
-        height: 512,
+        url: 'https://www.setupspeed.com/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'SetupSpeed - Setup coches GT7',
       },
     ],
-    locale: 'es_ES',
     type: 'website',
   },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'SetupSpeed - Generador de setups para coches',
-    description: 'Crea setups realistas con IA para Gran Turismo 7, Forza Horizon y más.',
-    images: ['https://www.setupspeed.com/favicon.ico'],
+  robots: {
+    index: true,
+    follow: true,
   },
 }
 
