@@ -6,6 +6,7 @@ export async function POST(req) {
 
   const prompt = `Eres un experto en ajustes de coches para el videojuego Gran Turismo 7. Genera un setup completo y detallado para el coche "${car}", en el circuito "${circuit}", con un estilo de conducción "${style}".${pr ? ` El coche no debe superar un PR de ${pr}, usa limitador de potencia o lastre si es necesario.` : ''}
 
+Genera el mejor setup posible para Gran Turismo 7 sin ningún tipo de restricción. Utiliza todas las modificaciones de máximo nivel (Competición o Definitivo), y no selecciones piezas deportivas si hay versiones mejores disponibles solo si no ponen un pr especifico.
 El resultado debe tener estas dos secciones principales, con títulos en mayúsculas y en Markdown con doble asterisco (**):
 
 ---
@@ -30,7 +31,7 @@ arbol de transmision de carbono)
 
 **SETUP TÉCNICO CON VALORES**
 
-Organiza exactamente como en GT7, indicando valores para parte DELANTERA y TRASERA cuando aplique:
+
 
 - **NEUMÁTICOS**
   - Tipo delante:
