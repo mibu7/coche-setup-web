@@ -20,11 +20,11 @@ export default function Resultado({ setup }) {
   const renderSeccion = (titulo, contenido) => (
     <div className="bg-[#111] border border-cyan-500 rounded-2xl p-6 shadow-[0_0_20px_#00f2ff40] transition hover:scale-[1.02] hover:shadow-[0_0_30px_#0ff]">
       <h2 className="text-2xl sm:text-3xl font-bold text-cyan-400 mb-4 uppercase drop-shadow-[0_0_6px_#0ff]">
-        {titulo}
-      </h2>
+  {titulo.replace(/\*\*/g, '')}
+</h2>
       <ul className="list-disc list-inside space-y-1 text-white text-base sm:text-lg">
         {contenido.trim().split('\n').map((line, i) => (
-          <li key={i}>{line.trim()}</li>
+          <li key={i}>{line.replace(/\*\*/g, '').trim()}</li>
         ))}
       </ul>
     </div>

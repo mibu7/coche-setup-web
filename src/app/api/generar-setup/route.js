@@ -16,12 +16,11 @@ Selecciona entre todas las modificaciones posibles de Gran Turismo 7 (de cualqui
 Solo muestra una lista de las piezas concretas que deberías instalar en este coche.
 Incluye solo las piezas realmente instaladas. Usa esta lista de referencia:
 
-→ (sistema informatico personalizable, filtro de aire (deportivo o de carrera), silenciador (deportivo o de competicion), pastillas de freno (deportivas o de competicion), suspension (callejera, deportiva, con altura ajustable  o totalmente personalizable),
+→ (sistema informatico personalizable, filtro de aire (deportivo o de carrera), silenciador (deportivo o de competicion), pastillas de freno (deportivas o de competicion), suspension totalmente personalizable,
 reduccion de peso (etapa 1, 2, 3, 4 o 5), neumaticos (comodos: duros, medios o blandos, deportivos: duros,medios o blandos, de competicion: duros,medios o blandos, de nieve, de tierra, intermedios o mojados),
 mayor diametro, arbol de levas, pistones, kit de frenos deportivos, de carreras o ceramicos de carbono,
 embrague y volante motor (deportivos, de semicompeticion o de competicion), diferencial (autoblocante de una via, de 2 vias o personalizable),
-transmision (de relacion cerrada baja o alta, manual totalmente personalizable o de competicion totalmente personalizable),
-limitador de potencia, lastre, cigüeñal de competicion, ordenador totalmente personalizable, turbocompresor de revolucion (baja, media, alta o ultraaltas), sobrealimentador (par bajo, par alto o de altas r.p.m. S),
+transmision (totalmente personalizable), limitador de potencia, lastre, cigüeñal de competicion, ordenador totalmente personalizable, turbocompresor de revolucion (baja, media, alta o ultraaltas), sobrealimentador (par bajo, par alto o de altas r.p.m. S),
 radiador (deportivo o de competicion), aumentar rigidez de la carroceria, mayor carrera, ajuste de equilibrado del motor, pulido de puertos, sistema anti-lag, colector de escape de competicion,
 controlador de equilibrio de frenos, controlador de diferencial autoblocante activo, sistema nitroso, freno de mano hidraulicos, adaptador de angulo de la direccion,
 controlador de direccion a las cuatro ruedas, nuevo motor, nueva carroceria, ensanchamiento S, incremento de carrera S, varillas de conexion y pistones de titanio, arbol de levas de elevacion alta S,
