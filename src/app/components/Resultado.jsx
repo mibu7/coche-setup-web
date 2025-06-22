@@ -1,11 +1,11 @@
-
 'use client'
 import { motion } from 'framer-motion'
 
 export default function Resultado({ setup }) {
   if (!setup) return null
 
-  const matchSecciones = setup.match(/\*\*MODIFICACIONES RECOMENDADAS\*\*([\s\S]*?)\*\*SETUP TÉCNICO CON VALORES\*\*([\s\S]*?)\*\*NOTAS Y CONSEJOS DE CONDUCCIÓN\*\*([\s\S]*)/)
+  // Extrae cada sección por texto plano
+  const matchSecciones = setup.match(/MODIFICACIONES RECOMENDADAS([\s\S]*?)SETUP TÉCNICO CON VALORES([\s\S]*?)NOTAS Y CONSEJOS DE CONDUCCIÓN([\s\S]*)/)
 
   if (!matchSecciones) {
     return (
@@ -18,21 +18,21 @@ export default function Resultado({ setup }) {
   const [_, componentes, tecnico, notas] = matchSecciones
 
   const renderSeccion = (titulo, contenido) => (
-  <div className="bg-[#111] border border-cyan-500 rounded-2xl p-6 shadow-[0_0_20px_#00f2ff40] transition hover:scale-[1.02] hover:shadow-[0_0_30px_#0ff]">
-    <h2 className="text-2xl sm:text-3xl font-bold text-cyan-400 mb-4 uppercase drop-shadow-[0_0_6px_#0ff]">
-      {titulo.replace(/\*\*/g, '')}
-    </h2>
-    <ul className="list-disc list-inside space-y-1 text-white text-base sm:text-lg">
-      {contenido
-        .trim()
-        .split('\n')
-        .filter((line) => line.trim() !== '')
-        .map((line, i) => (
-          <li key={i}>{line.replace(/\*\*/g, '').trim()}</li>
-        ))}
-    </ul>
-  </div>
-)
+    <div className="bg-[#111] border border-cyan-500 rounded-2xl p-6 shadow-[0_0_20px_#00f2ff40] transition hover:scale-[1.02] hover:shadow-[0_0_30px_#0ff]">
+      <h2 className="text-2xl sm:text-3xl font-bold text-cyan-400 mb-4 uppercase drop-shadow-[0_0_6px_#0ff]">
+        {titulo}
+      </h2>
+      <ul className="list-disc list-inside space-y-1 text-white text-base sm:text-lg whitespace-pre-line">
+        {contenido
+          .trim()
+          .split('\n')
+          .filter((line) => line.trim() !== '')
+          .map((line, i) => (
+            <li key={i}>{line.trim()}</li>
+          ))}
+      </ul>
+    </div>
+  )
 
   return (
     <motion.div
