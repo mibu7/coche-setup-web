@@ -5,7 +5,7 @@ import { useState } from 'react'
 export default function Formulario({ onGenerate }) {
   const [car, setCar] = useState('')
   const [circuit, setCircuit] = useState('')
-  const [game, setGame] = useState('GT7')
+  const [game, setGame] = useState('Gran Turismo 7')
   const [style, setStyle] = useState('grip')
   const [loading, setLoading] = useState(false)
   const [pr, setPr] = useState('')
