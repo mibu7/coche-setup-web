@@ -2,8 +2,8 @@
 import './globals.css'
 
 export const metadata = {
-  title: 'SetupSpeed',
-  description: 'Generador de Setups con IA estilo Racing',
+  title: 'SetupSpeed - Generador de setups para coches',
+  description: 'Crea setups realistas y optimizados para Gran Turismo 7, Forza Horizon y más.',
 }
 
 export default function RootLayout({ children }) {
