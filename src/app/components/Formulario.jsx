@@ -31,10 +31,10 @@ export default function Formulario({ onGenerate }) {
 
       <div className="w-full max-w-md space-y-4">
         <select value={game} onChange={(e) => setGame(e.target.value)} className="w-full">
-          <option>GT7</option>
-          <option>Forza Horizon 5</option>
-          <option>Assetto Corsa</option>
-        </select>
+  <option>Gran Turismo 7</option>
+  <option>Forza Horizon 5</option>
+  <option>Assetto Corsa</option>
+</select>
         <input type="text" placeholder="Coche (ej: Mazda RX-7)" value={car} onChange={(e) => setCar(e.target.value)} className="w-full" />
         <input type="text" placeholder="Circuito (ej: Nürburgring)" value={circuit} onChange={(e) => setCircuit(e.target.value)} className="w-full" />
         <input type="number" placeholder="Límite de PR (opcional)" value={pr} onChange={(e) => setPr(e.target.value)} className="w-full" />
